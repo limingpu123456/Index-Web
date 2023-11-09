@@ -11,7 +11,7 @@ import org.springframework.util.StringUtils;
 import java.util.Date;
 import java.util.UUID;
 
-//读取配置文件中的token设置
+//读取配置文件中的token设置，prefix是找到配置文件中对应的前缀
 @ConfigurationProperties(prefix = "jwt")
 @Component
 public class JwtUtil {

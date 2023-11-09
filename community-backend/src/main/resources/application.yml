@@ -7,20 +7,11 @@ spring:
     url: jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8
     username: root
     password: woshizhu123
-    session:
-      store-type: redis
-      redis:
-        flush-mode: on_save
-        namespace: spring:session
-      servlet:
-        session:
-          timeout: 1800
-      data:
-        redis:
-          host: 127.0.0.1
-          password:
-          port: 6379
-          database: 1
+  redis:
+    open: true
+    database: 2
+    host: 127.0.0.1
+    port: 6379
 jwt:
   secret: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4K67DMlSPXbgG0MPp0gH
   expire: 86400000

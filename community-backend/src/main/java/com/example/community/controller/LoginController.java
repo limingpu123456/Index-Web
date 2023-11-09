@@ -59,19 +59,19 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    //JSON格式需要RequestBody
+    //前端传递的是JSON格式的话，需要加@RequestBody注解转成Java对象
     public Result login(@RequestBody LoginForm loginForm, HttpSession session){
-        //验证码校验
+        //1.验证码校验
         String captcha = (String)this.redisTemplate.opsForValue().get(loginForm.getUuid());
-        //判断验证码是否有效
+        //1.1判断验证码是否有效
         if(captcha == null){
             return Result.ok().put("status","fail").put("data","验证码已过期");
         }
-        //判断验证码是否正确
+        //1.2判断验证码是否正确
         if(!captcha.equals(loginForm.getCaptcha())){
             return Result.ok().put("status","fail").put("data","验证码错误");
         }
-        //判断用户名是否正确
+        //2.判断用户名是否正确
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
         queryWrapper.eq("username",loginForm.getUsername());
         //这样写不行，getone不好用，直接掉mapper就行了
@@ -80,7 +80,8 @@ public class LoginController {
         if(user == null){
             return Result.ok().put("status","fail").put("data","用户名不存在");
         }
-        //判断密码是否正确
+        //3.判断密码是否正确
+        //用hutool的工具类
         String password = SecureUtil.sha256(loginForm.getPassword());
         if(!password.equals(user.getPassword())){
             return Result.ok().put("status","fail").put("data","密码错误");
@@ -90,13 +91,15 @@ public class LoginController {
             return Result.ok().put("status","fail").put("data","当前账号已被锁定，请联系管理员");
         }
         //登录成功
+        //前端存到cookie中，后端存到session中
         session.setAttribute("user",user);
         //创建token
+        //使用token来控制前后端传递数据的安全，有了令牌就可以判断是不是本人了
         String token = jwtUtil.createToken(String.valueOf(user.getUserId()));
         redisTemplate.opsForValue().set("community:user:"+user.getUserId(),token,jwtUtil.getExpire());
         Map<String,Object> map = new HashMap(2);
         map.put("token",token);
-        map.put("expire",jwtUtil);
+        map.put("expire",jwtUtil.getExpire());
         return Result.ok().put("status","success").put("data",map);
     }
 
