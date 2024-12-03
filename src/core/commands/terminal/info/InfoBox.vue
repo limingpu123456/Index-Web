@@ -7,9 +7,7 @@
   </div>
   <div></div>
   <div>
-    作者：
-    <a href="https://docs.qq.com/doc/DUFFRVWladXVjeUxW" target="_blank">
-      程序员鱼皮
+    作者：リメンホ
     </a>
   </div>
 </template>
