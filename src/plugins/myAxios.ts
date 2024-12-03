@@ -5,7 +5,7 @@ const myAxios = axios.create({
   baseURL:
     // @ts-ignore
     process.env.NODE_ENV === "production"
-      ? "https://b.limingpu.cn/api"
+      ? "http://b.limingpu.cn/api"
       : "http://localhost:7345/api",
 });
 
