@@ -8,7 +8,6 @@
   <div></div>
   <div>
     作者：リメンホ
-    </a>
   </div>
 </template>
 
