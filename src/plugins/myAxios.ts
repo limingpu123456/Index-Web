@@ -9,6 +9,7 @@ const myAxios = axios.create({
       : "http://localhost:7345/api",
 });
 
+//向后台传递cookie
 myAxios.defaults.withCredentials = true;
 
 // 添加请求拦截器
