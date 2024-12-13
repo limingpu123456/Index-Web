@@ -4,7 +4,7 @@ import ComponentOutputType = YuTerminal.ComponentOutputType;
 
 /**
  * 快捷键命令
- * @author yupi
+ * @author limingpu
  */
 const shortcutCommand: CommandType = {
   func: "shortcut",

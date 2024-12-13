@@ -4,7 +4,7 @@ import ComponentOutputType = YuTerminal.ComponentOutputType;
 
 /**
  * DDOS 命令（整活）
- * @author yupi
+ * @author limingpu
  */
 const ddosCommand: CommandType = {
   func: "ddos",

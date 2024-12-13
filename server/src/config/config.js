@@ -1,6 +1,6 @@
 /**
  * 默认配置
- * @author yupi
+ * @author limingpu
  */
 module.exports = {
   redisConfig: {

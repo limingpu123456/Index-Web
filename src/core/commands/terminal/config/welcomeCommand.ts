@@ -3,7 +3,7 @@ import { useTerminalConfigStore } from "./terminalConfigStore";
 
 /**
  * 自定义终端欢迎语
- * @author yupi
+ * @author limingpu
  */
 const welcomeCommand: CommandType = {
   func: "welcome",

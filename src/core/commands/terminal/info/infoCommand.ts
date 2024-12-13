@@ -4,7 +4,7 @@ import ComponentOutputType = YuTerminal.ComponentOutputType;
 
 /**
  * 查看网站本身信息命令
- * @author yupi
+ * @author limingpu
  */
 const infoCommand: CommandType = {
   func: "info",

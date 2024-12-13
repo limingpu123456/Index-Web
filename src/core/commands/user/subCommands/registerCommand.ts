@@ -4,7 +4,7 @@ import { userRegister } from "../userApi";
 
 /**
  * 用户注册命令
- * @author yupi
+ * @author limingpu
  */
 const registerCommand: CommandType = {
   func: "register",

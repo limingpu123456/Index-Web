@@ -4,7 +4,7 @@ import TaskType = Todo.TaskType;
 
 /**
  * 添加任务命令
- * @author yupi
+ * @author limingpu
  */
 const addCommand: CommandType = {
   func: "add",

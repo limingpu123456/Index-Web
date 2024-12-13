@@ -3,7 +3,7 @@ import myDayjs from "../../plugins/myDayjs";
 
 /**
  * 日期命令
- * @author yupi
+ * @author limingpu
  */
 const dateCommand: CommandType = {
   func: "date",

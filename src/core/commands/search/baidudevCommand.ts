@@ -2,7 +2,7 @@ import { CommandType } from "../../command";
 
 /**
  * 百度开发者搜索命令
- * @author yupi
+ * @author limingpu
  */
 const baidudevCommand: CommandType = {
   func: "baidudev",

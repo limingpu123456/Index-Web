@@ -405,12 +405,8 @@ onMounted(() => {
     });
   } else {
     terminal.writeTextOutput(
-      `Welcome to YuIndex, coolest browser index for geeks!` +
+      `Welcome to WebIndex, coolest browser index for geeks!` +
         `<a href="//github.com/limingpu123456/Index-Web" target='_blank'> GitHub Open Source</a>`
-    );
-    terminal.writeTextOutput(
-      `Author <a href="//docs.qq.com/doc/DUFFRVWladXVjeUxW" target="_blank">coder_yupi</a>` +
-        `: please input 'help' to enjoy`
     );
     terminal.writeTextOutput("<br/>");
   }

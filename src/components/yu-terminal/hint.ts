@@ -6,7 +6,7 @@ import { useTerminalConfigStore } from "../../core/commands/terminal/config/term
 
 /**
  * 命令提示功能
- * @author yupi
+ * @author limingpu
  */
 const useHint = () => {
   const hint = ref("");

@@ -2,7 +2,7 @@ import { CommandType } from "../../command";
 
 /**
  * 知乎搜索命令
- * @author yupi
+ * @author limingpu
  */
 const zhihuCommand: CommandType = {
   func: "zhihu",

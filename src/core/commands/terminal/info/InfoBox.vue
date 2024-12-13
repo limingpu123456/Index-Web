@@ -1,5 +1,5 @@
 <template>
-  <div>关于本站：YuIndex 极客范儿的浏览器主页</div>
+  <div>关于本站：WebIndex 极客范儿的浏览器主页</div>
   <div>
     <a href="https://github.com/limingpu123456/Index-Web" target="_blank">
       代码开源，欢迎 star 和贡献~
